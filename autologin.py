@@ -19,7 +19,7 @@ def phonelogin():
     driver.maximize_window()
 
     driver.implicitly_wait(120)
-    driver.get("https://eportal-uat.ughub.go.ug/e-portal/home/")
+    driver.get("")
 
 
     print('trying to select')
@@ -55,7 +55,7 @@ def userlogin():
     driver.maximize_window()
 
     driver.implicitly_wait(120)
-    driver.get("https://eportal-uat.ughub.go.ug/e-portal/home/")
+    driver.get("")
 
     print('trying to select')
     driver.find_element('xpath', '/html/body/div[1]/div/section/header/div[2]/div[3]/div/div/div[2]/div/div/div[2]/button/span').click()
