@@ -11,6 +11,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from os import environ
+
+from dotenv import load_dotenv
+load_dotenv()
+
+
+
 
 def phonelogin():
     phone = input("Enter in your phone: ")
@@ -19,7 +26,9 @@ def phonelogin():
     driver.maximize_window()
 
     driver.implicitly_wait(120)
-    driver.get("")
+
+    url = environ.get('baseurl')
+    driver.get(url)
 
 
     print('trying to select')
@@ -55,7 +64,9 @@ def userlogin():
     driver.maximize_window()
 
     driver.implicitly_wait(120)
-    driver.get("")
+    url = environ.get('baseurl')
+    driver.get(url)
+
 
     print('trying to select')
     driver.find_element('xpath', '/html/body/div[1]/div/section/header/div[2]/div[3]/div/div/div[2]/div/div/div[2]/button/span').click()
@@ -101,5 +112,5 @@ def userlogin():
     time.sleep(5)
 
 phonelogin()
-userlogin()
+# userlogin()
 driver.quit()
