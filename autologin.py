@@ -1,5 +1,3 @@
-import imp
-from lib2to3.pgen2 import driver
 from selenium import webdriver
 from getpass import getpass
 
