@@ -42,6 +42,13 @@ class RegisterUser:
 
     def __init__(self, driver):
         self.driver = driver
+        self.driver.maximize_window()
+
+    def Register(self):
+        register = WebDriverWait(self.driver, 20).until(
+            EC.presence_of_element_located((By.XPATH, self.register_xpath))
+        )
+        register.click()
     
     
     def setFirstName(self, fName):
@@ -131,11 +138,11 @@ class RegisterUser:
         )
         date.click()
 
-    def setSelectDate(self, date):
         selectdate = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located((By.XPATH, self.selectdate_xpath))
         )
         selectdate.click()
+        
 
 
 

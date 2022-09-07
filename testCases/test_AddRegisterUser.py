@@ -36,7 +36,7 @@ class Test_001_RegisterUser:
         self.adduser = RegisterUser(self.driver)
 
         self.logger.info("************* Providing user info **********")
-
+        self.adduser.Register()
         self.adduser.setFirstName(self.fName)
         self.adduser.setLastName(self.lName)
         self.adduser.setOtherName(self.oName)
@@ -57,7 +57,6 @@ class Test_001_RegisterUser:
 
 
         self.adduser.setDate()
-        self.adduser.setSelectDate()
         self.adduser.AddRegisteredUser()
         
 
