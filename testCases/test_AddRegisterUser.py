@@ -22,6 +22,7 @@ class Test_001_RegisterUser:
     uEmail = 'test@test.com'
     cPassword = 'Test@2022An'
     uPassword = 'Test@2022An'
+    uNin = 'CM12WER432WERa'
 
     @pytest.mark.sanity
     @pytest.mark.regression
@@ -57,6 +58,9 @@ class Test_001_RegisterUser:
 
 
         self.adduser.setDate()
+
+        self.adduser.setNin(self.uNin)
+
         self.adduser.AddRegisteredUser()
         
 

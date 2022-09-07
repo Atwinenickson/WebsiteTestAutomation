@@ -36,7 +36,9 @@ class RegisterUser:
 
     selectdate_xpath = '/html/body/div[3]/div/div/div/div/div[1]/div[2]/table/tbody/tr[2]/td[4]/div'
 
-    addregister_xpath = '/html/body/div[2]/div[2]/div/div/div[3]/form/div[7]/div/button'
+    addregister_xpath = '/html/body/div[1]/div/section/main/div[1]/div/div[2]/form/div[3]/div/button[2]/span'
+
+    addNin_xpath = '//*[@id="user-profile-data_ninReg"]'
 
 
 
@@ -121,6 +123,12 @@ class RegisterUser:
             EC.presence_of_element_located((By.XPATH, self.nation_xpath))
         )
         nation.click()
+
+    def setNin(self):
+        nin = WebDriverWait(self.driver, 20).until(
+            EC.presence_of_element_located((By.XPATH, self.addNin_xpath))
+        )
+        nin.click()
 
     def setSNation(self):
         Snation = WebDriverWait(self.driver, 20).until(
