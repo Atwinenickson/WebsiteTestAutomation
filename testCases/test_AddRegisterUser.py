@@ -39,6 +39,7 @@ class Test_003_RegisterUser:
         self.logger.info("************* Providing user info **********")
         self.adduser.Register()
         self.adduser.setFirstName(self.fName)
+        self.driver.save_screenshot('sample_screenshot_1.png')
         self.adduser.setLastName(self.lName)
         self.adduser.setOtherName(self.oName)
         self.adduser.setPhone(self.pNumber)

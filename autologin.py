@@ -29,27 +29,28 @@ def phonelogin():
     driver.get(url)
 
     element = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div/section/header/div[2]/div[3]/div/div/div[2]/div/div/div[2]/button/span"))
+        EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div/section/header/div[2]/div[3]/div/div/div[2]/div/div/div[2]/button"))
     )
     element.click()
-    driver.implicitly_wait(100)
+    # driver.implicitly_wait(100)
 
     element1 = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/div/div/div/div[2]/div/div/div[2]/div/div/div/div[1]/h5"))
+        EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div/section/main/div[1]"))
     )
     element1.click()
+    time.sleep(10)
 
-    driver.implicitly_wait(80)
-    driver.find_element('xpath', '/html/body/div[2]/div[1]/div/div/div/div/div/div[2]/button').click()
+    # driver.implicitly_wait(80)
+    # driver.find_element('xpath', '/html/body/div[2]/div[1]/div/div/div/div/div/div[2]/button').click()
 
-    username_textbox = driver.find_element('xpath','//*[@id="username"]')
-    username_textbox.send_keys(phone)
+    # username_textbox = driver.find_element('xpath','//*[@id="username"]')
+    # username_textbox.send_keys(phone)
 
 
-    login_button = driver.find_element('xpath', '//*[@id="checkUser"]').click()
-    login_button.submit()
+    # login_button = driver.find_element('xpath', '//*[@id="checkUser"]').click()
+    # login_button.submit()
 
-    time.sleep(5)
+    time.sleep(10)
 
 
 def userlogin():
