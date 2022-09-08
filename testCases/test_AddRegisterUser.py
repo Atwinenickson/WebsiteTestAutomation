@@ -6,7 +6,7 @@ from utilities.customLogger import LogGen
 import string
 import random
 
-class Test_001_RegisterUser:
+class Test_003_RegisterUser:
     baseURL = ReadConfig.getApplicationURL()
     username = ReadConfig.getUseremail()
     password = ReadConfig.getPassword()
@@ -26,7 +26,7 @@ class Test_001_RegisterUser:
 
     @pytest.mark.sanity
     @pytest.mark.regression
-    def test_addCustomer(self,setup):
+    def test_addEportalUser(self,setup):
         self.logger.info("************* Test_001_RegisterUser **********")
         self.driver=setup
         self.driver.get(self.baseURL)

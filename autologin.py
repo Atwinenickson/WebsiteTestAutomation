@@ -35,7 +35,7 @@ def phonelogin():
     driver.implicitly_wait(100)
 
     element1 = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/div/div/div/div[2]/div/div/div[2]/div/div/div"))
+        EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/div/div/div/div[2]/div/div/div[2]/div/div/div/div[1]/h5"))
     )
     element1.click()
 
@@ -223,7 +223,6 @@ def signup():
 
 
 
-# phonelogin()
+phonelogin()
 # userlogin()
-signup()
-driver.quit()
+# signup()
